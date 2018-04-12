@@ -12,6 +12,16 @@ module.exports = {
   },
   devServer: {
     //  contentBase: './dist',
+    port: 8085,
+    historyApiFallback: {
+      index: '/dist/index.html'
+    }
+  },
+  resolve: {
+    alias: {
+      pages: path.resolve(__dirname, '../src/pages'),
+      components: path.resolve(__dirname, '../src/components')
+    }
   },
   module: {
     rules: [
@@ -69,7 +79,8 @@ module.exports = {
   plugins: [
     // 处理html文件
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, '../src/index.html')
+      template: path.join(__dirname, '../src/index.html'),
+      favicon: path.join(__dirname, '../favicon.ico')
     }),
     // 独立css文件
     new ExtractTextPlugin("css/[name].css"),

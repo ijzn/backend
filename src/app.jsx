@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
-import './index.scss'
-import 'font-awesome/css/font-awesome.min.css'
+import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom';
 
-ReactDOM.render(
-  <div>
-    {/* <i className="fa fa-address-book" aria-hidden="true"></i> */}
-    <h1>Hello, world!</h1>  
-  </div>,
-  document.getElementById('app')
-);
+// 页面
+import Home from 'pages/Home/index.jsx'
+// 布局
+import Layout from 'components/layout/index.jsx'
+
+class App extends React.Component{
+  render () {
+    return (
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path='/' component={Home} ></Route>
+            <Route path='/product' component={Home} ></Route>
+            <Route path='/product.category' component={Home} ></Route>
+            <Home></Home>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    )
+  }
+}
+
+ReactDOM.render(<App />,document.getElementById('app'))
