@@ -15,12 +15,24 @@ module.exports = {
     port: 8085,
     historyApiFallback: {
       index: '/dist/index.html'
+    },
+    proxy: {
+      '/manage/*' : {
+        target: 'http://admintest.happymmall.com',
+        changeOrigin: true,
+      },
+      '/user/logout.do' : {
+        target: 'http://admintest.happymmall.com',
+        changeOrigin: true,
+      }
     }
   },
   resolve: {
     alias: {
       pages: path.resolve(__dirname, '../src/pages'),
-      components: path.resolve(__dirname, '../src/components')
+      components: path.resolve(__dirname, '../src/components'),
+      util: path.resolve(__dirname, '../src/util'),
+      api: path.resolve(__dirname, '../src/api')
     }
   },
   module: {
