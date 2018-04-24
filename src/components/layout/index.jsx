@@ -3,7 +3,7 @@ import TopNav from 'components/topNav/index.jsx';
 import SildNav from 'components/sildNav/index.jsx';
 
 import './theme.css'
-
+import './index.scss'
 export default class Layout extends React.Component {
   constructor (props) {
     super(props) 

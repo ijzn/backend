@@ -23,7 +23,6 @@ export default class UserList extends Component {
   loadUserList () {
      _user.getUserList(this.state.pageNum)
      .then(res => {
-       console.log('OK')
        this.setState(res, () => {
         this.setState({
           firstLoad: false
@@ -33,8 +32,7 @@ export default class UserList extends Component {
      .catch(err => {
        this.setState({
          list: []
-       })
-       console.log('ERR')        
+       })        
        _mm.errorTips(err)
      })
   }
