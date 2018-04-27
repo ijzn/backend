@@ -16,13 +16,13 @@ export default class topNav extends React.Component {
     }
   }
   onLayout () {
-   /*  _user.logout()
+    _user.logout()
     .then(res=>{
       _mm.removeStorage('userInfo')      
       location.href = '/login'
     },errmsg=>{
       _mm.errorTips(errmsg)      
-    }) */
+    })
   }
   render () {
     return (

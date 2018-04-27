@@ -68,7 +68,6 @@ export default class Login extends Component {
                   className="form-control" 
                   id="exampleInputEmail1" 
                   placeholder="请输入用户名"
-                  onKeyUp={e => this.onInputKeyUp(e)}
                   onChange={e => this.onInputChange(e)} />
               </div>
               <div className="form-group">

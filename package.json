@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.config.js",
-    "dist": "webpack"
+    "dev"       : "webpack-dev-server --config build/webpack.config.js",
+    "dist"      : "WEBPACK_ENV=online node_modules/.bin/webpack -p",
+    "dist_win"  : "set WEBPACK_ENV=online&& node_modules/.bin/webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

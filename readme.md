@@ -1,9 +1,8 @@
-[TOC]
+# 克隆项目
+git clone https://github.com/ijzn/backend.git
+#下载依赖
+npm i / yarn
+#运行项目
+npm run dev
 
-## React基础 
-
-1. 视图层框架
-2. 组件化
-3. jsx表达式
-4. 虚拟dom
 
